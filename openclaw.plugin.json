@@ -1,0 +1,21 @@
+{
+  "id": "endmark",
+  "name": "Endmark",
+  "description": "AI does the middle. A named person decides what ships. Approval cards with signed, hash-chained receipts.",
+  "categories": ["security"],
+  "contracts": {
+    "tools": ["endmark_declare"]
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "skills": ["./skills"],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "storePath": { "type": "string", "description": "Where receipts are written. Default ~/.openclaw/endmark/receipts.jsonl" },
+      "ownDomains": { "type": "array", "items": { "type": "string" }, "description": "Email domains that count as internal recipients." }
+    }
+  }
+}

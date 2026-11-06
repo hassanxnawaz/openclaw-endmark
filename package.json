@@ -1,0 +1,26 @@
+{
+  "name": "openclaw-endmark",
+  "version": "0.1.0",
+  "description": "Endmark for OpenClaw: AI does the middle, a named person decides what ships. Approval cards with signed receipts.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Hassan Nawaz",
+  "keywords": ["openclaw", "openclaw-plugin", "approvals", "human-in-the-loop", "agents", "endmark"],
+  "files": ["src", "skills", "assets", "openclaw.plugin.json", "README.md"],
+  "scripts": {
+    "test": "node --test test/*.test.ts"
+  },
+  "dependencies": {
+    "typebox": "1.4.3"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.10.9"
+  },
+  "openclaw": {
+    "extensions": ["./src/index.ts"],
+    "compat": {
+      "pluginApi": ">=2026.10.9",
+      "minGatewayVersion": "2026.10.9"
+    }
+  }
+}
